@@ -1,4 +1,4 @@
-alert("hi");
+
 let currentTime = new Date();
 let weekday = [
   "Sunday",
@@ -75,7 +75,7 @@ searchorm.addEventListener("submit", fun1);
 fun3("sydney");
 //add current button
 function position(position) {
-  let apiKey = "a5071e19f2b7844c8e998b3ff76e1153";
+  let apiKey = "082d3d02ffdb12f2fd9b259e2ced1d0d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(fun2);
 }
