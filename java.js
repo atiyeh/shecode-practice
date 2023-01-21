@@ -1,4 +1,4 @@
-
+alert("hi");
 let currentTime = new Date();
 let weekday = [
   "Sunday",
