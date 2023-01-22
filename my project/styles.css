@@ -1,0 +1,89 @@
+.emoji {
+  position: relative;
+  right: 20px;
+  font-size: 50px;
+}
+body {
+  background-image: url("pic/1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+}
+.card-title {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 10px;
+}
+.appborder {
+  border: 1px solid rgb(131, 128, 134);
+  margin: 10px auto;
+  max-width: 600px;
+  max-height: 432px;
+  border-radius: 20px;
+  margin-top: 100px;
+  background-color: rgb(255, 255, 255);
+}
+.row {
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  left: 70px;
+  font-size: 10px;
+  margin-right: 0px;
+  max-width: 500px;
+  max-height: 340px;
+}
+.form-control-s {
+  position: relative;
+  left: 10px;
+}
+.search-form {
+  position: relative;
+  left: 40px;
+  max-width: 400px;
+}
+.card-title,
+.card-text {
+  position: relative;
+  right: 7px;
+  font-weight: 500;
+  color: brown;
+}
+.cityname {
+  text-align: left;
+  font-size: 40px;
+  display: inline;
+  margin: 0px auto;
+}
+.city-weather-describe {
+  list-style: none;
+  text-align: left;
+}
+.city-weather-describe,
+.cityname {
+  position: relative;
+  left: 10px;
+}
+.temp {
+  display: inline;
+  font-size: 48px;
+  line-height: 1;
+  position: relative;
+  bottom: 86px;
+  left: 86px;
+}
+.units {
+  font-size: 16px;
+  position: relative;
+  bottom: 140px;
+  left: 145px;
+}
+.secound-row {
+  list-style: none;
+  position: relative;
+  left: 100px;
+  bottom: 90px;
+  font-size: 10px;
+}
