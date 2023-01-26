@@ -32,19 +32,22 @@
     <div class="container">
       <div class="appborder">
         <div class="search-form">
-          <div class="d-flex">
-            <form>
-              <input
-                type="text"
-                placeholder="Type a city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="city-input"
-              />
-              <input type="submit" value="Search" class="btn btn-primary" />
-            </form>
-            <button class="btn btn-info">Current</button>
+          <div class="row">
+            <div class="d-flex col-10">
+              <form>
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control city-input"
+                />
+              </form>
+              <div class="d-flex col-3">
+                <input type="submit" value="Search" class="btn btn-primary" />
+              </div>
+            </div>
           </div>
         </div>
         <div class="weather-data">
