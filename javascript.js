@@ -29,16 +29,30 @@ function displayTemperature(response) {
   let describeElement = document.querySelector("#weather-details");
   let HumidityElement = document.querySelector("#Humidity");
   let windElement = document.querySelector("#Wind");
-
+  let iconElement = document.querySelector("#icon");
   tempratureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
   describeElement.innerHTML = response.data.condition.description;
   HumidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   timeElement.innerHTML = displayDate(response.data.time * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.condition.icon);
 }
+function search(city) {
+  let key = "f1adfdb622o0f53eb34a701c61b4t32f";
+  let apiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}`;
+  axios.get(apiurl).then(displayTemperature);
+}
+function displayCity(event) {
+  event.preventDefault();
+  let cityinput = document.querySelector("#city-input");
+  search(cityinput.value);
+}
+search("tehran");
 
-let key = "f1adfdb622o0f53eb34a701c61b4t32f";
-let query = "Paris";
-let apiurl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}`;
-axios.get(apiurl).then(displayTemperature);
+let searchForm = document.querySelector("#searchForm");
+searchForm.addEventListener("submit", displayCity);
