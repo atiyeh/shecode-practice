@@ -7,8 +7,12 @@ body {
 }
 .card-title {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 15px;
   font-size: 10px;
+  padding-top: 0px;
+}
+.card-body {
+  padding-top: 0px;
 }
 .card-title,
 .card-text {
@@ -62,4 +66,11 @@ body {
 }
 .icon {
   width: 90px;
+}
+.temperature-elemnt .active {
+  cursor: default;
+  color: black;
+}
+.temperature-elemnt .active:hover {
+  text-decoration: none;
 }
