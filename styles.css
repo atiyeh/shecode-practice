@@ -38,6 +38,7 @@ body {
   text-align: left;
   font-size: 40px;
   margin-top: 6px;
+  text-transform: capitalize;
 }
 .overview {
   margin-bottom: 15px;
@@ -54,4 +55,7 @@ body {
   text-align: center;
   font-size: 10px;
   margin-bottom: 10px;
+}
+.weather-details {
+  text-transform: capitalize;
 }

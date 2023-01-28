@@ -53,9 +53,9 @@
         <div class="weather-data">
           <div class="weather-data-header">
             <div class="overview">
-              <div class="city-name">Tehran</div>
-              <div class="current-time">friday 13:30</div>
-              <div class="weather-details">clearSky</div>
+              <div class="city-name" id="city-name"></div>
+              <span class="lastupdate">Last Updated At: <span class="current-time" id="current-time"></span></span>
+              <div class="weather-details" id="weather-details"></div>
             </div>
           </div>
           <div class="row">
@@ -66,7 +66,7 @@
                   alt="sunny"
                 />
                 <div class="temperature-elemnt">
-                  <span class="temperature-number" id="temperature">19</span>
+                  <span class="temperature-number" id="temperature"></span>
                   <span class="units">
                     <a href="#" id="celsius-link">°C</a> |
                     <a href="#" id="fahrenheit-link">°F</a>
@@ -75,8 +75,8 @@
               </div>
             </div>
             <div class="col-6">
-              <div>Humidity: <span id="Humidity"></span>2%</div>
-              <div>Wind: <span id="Wind"></span> 2km/h</div>
+              <div>Humidity: <span id="Humidity"></span>%</div>
+              <div>Wind: <span id="Wind"></span>km/h</div>
             </div>
           </div>
         </div>
