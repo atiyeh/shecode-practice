@@ -37,12 +37,14 @@ body {
 .city-name {
   text-align: left;
   font-size: 40px;
-  display: inline;
-  margin: 0px auto;
+  margin-top: 6px;
 }
 .overview {
   margin-bottom: 15px;
 }
-city-input {
-  font-size: 40px;
+.search-form {
+  margin-top: 0px;
+}
+.row {
+  margin-top: -8px;
 }
