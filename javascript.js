@@ -95,26 +95,44 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = date.getDay();
+
+  return weekDays[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let dailyForcast = response.data.daily;
+  console.log(dailyForcast);
   let weatherForcastElement = document.querySelector("#weather-forcast");
-  let weekDays = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
   let weatherForcast = `<div class="row">`;
-  weekDays.forEach(function (day) {
-    weatherForcast =
-      weatherForcast +
-      ` 
+  dailyForcast.forEach(function (forcastDay, index) {
+    if (index < 5) {
+      weatherForcast =
+        weatherForcast +
+        ` 
       <div class="col-2">
   <div class="forcast-date">
-    ${day}
+    ${formatDay(forcastDay.time)}
   </div>
-  <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" width="42">
+  <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+    forcastDay.condition.icon
+  }.png" width="42">
   <div class="forcast-temperature"> 
-    <span class="forcast-min-temp">10°</span>
-    <span class="forcast-max-temp">12°</span>
+    <span class="forcast-min-temp">${Math.round(
+      forcastDay.temperature.minimum
+    )}°</span>
+    <span class="forcast-max-temp">${Math.round(
+      forcastDay.temperature.maximum
+    )}°</span>
   </div>
 </div>`;
+    }
   });
+
   weatherForcast = weatherForcast + `</div>`;
   weatherForcastElement.innerHTML = weatherForcast;
 }
