@@ -113,7 +113,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let day = date.getDay();
 
   return weekDays[day];
@@ -136,14 +136,14 @@ function displayForecast(response) {
   </div>
   <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
     forcastDay.condition.icon
-  }.png" width="42">
+  }.png" width="45">
   <div class="forcast-temperature"> 
     <span class="forcast-min-temp">${Math.round(
       forcastDay.temperature.minimum
-    )}°</span>
+    )}°C</span>
     <span class="forcast-max-temp">${Math.round(
       forcastDay.temperature.maximum
-    )}°</span>
+    )}°C</span>
   </div>
 </div>`;
     }
