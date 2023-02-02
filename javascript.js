@@ -84,3 +84,27 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+function displayForecast() {
+  let weatherForcastElement = document.querySelector("#weather-forcast");
+  let weekDays = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let weatherForcast = `<div class="row">`;
+  weekDays.forEach(function (day) {
+    weatherForcast =
+      weatherForcast +
+      ` 
+      <div class="col-2">
+  <div class="forcast-date">
+    ${day}
+  </div>
+  <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" width="42">
+  <div class="forcast-temperature"> 
+    <span class="forcast-min-temp">10°</span>
+    <span class="forcast-max-temp">12°</span>
+  </div>
+</div>`;
+  });
+  weatherForcast = weatherForcast + `</div>`;
+  weatherForcastElement.innerHTML = weatherForcast;
+}
+displayForecast();
