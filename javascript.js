@@ -1,5 +1,21 @@
 function displayDate(timestamp) {
   let date = new Date(timestamp);
+  let Dates = date.getDate();
+  let month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let months = month[date.getMonth()];
   let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
@@ -19,7 +35,7 @@ function displayDate(timestamp) {
   ];
   let day = days[date.getDay()];
 
-  return `${day} ${hour}:${minutes}`;
+  return ` ${months} ${Dates} ${day} ${hour}:${minutes}`;
 }
 function getForcast(coordinates) {
   console.log(coordinates);
