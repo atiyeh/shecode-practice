@@ -127,6 +127,8 @@ function displayForecast(response) {
   let weatherForcast = `<div class="row">`;
   dailyForcast.forEach(function (forcastDay, index) {
     if (index < 5) {
+      let minimum = Math.round(forcastDay.temperature.minimum);
+      let maximum = Math.round(forcastDay.temperature.maximum);
       weatherForcast =
         weatherForcast +
         ` 
@@ -138,12 +140,8 @@ function displayForecast(response) {
     forcastDay.condition.icon
   }.png" width="45">
   <div class="forcast-temperature"> 
-    <span class="forcast-min-temp">${Math.round(
-      forcastDay.temperature.minimum
-    )}°C</span>
-    <span class="forcast-max-temp">${Math.round(
-      forcastDay.temperature.maximum
-    )}°C</span>
+    <span class="forcast-min-temp">${minimum}°C</span>
+    <span class="forcast-max-temp">${maximum}°C</span>
   </div>
 </div>`;
     }
