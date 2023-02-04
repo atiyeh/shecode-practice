@@ -1,9 +1,11 @@
 body {
-  background-image: url("pic/back-1.webp");
+  background-image: url("pic/back.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: darken;
+  object-fit: cover;
+  background-position: center;
 }
 .card-title {
   text-align: center;
