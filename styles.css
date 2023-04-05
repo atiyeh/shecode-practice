@@ -7,22 +7,7 @@ body {
   object-fit: cover;
   background-position: center;
 }
-.card-title {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 10px;
-  padding-top: 0px;
-}
-.card-body {
-  padding-top: 0px;
-}
-.card-title,
-.card-text {
-  position: relative;
-  right: 7px;
-  font-weight: 500;
-  color: brown;
-}
+
 .appborder {
   margin: 30px auto;
   padding: 40px;
