@@ -46,7 +46,7 @@ body {
   font-weight: 600;
   text-align: center;
   font-size: 10px;
-  margin-top: -10px;
+  margin-top: -22px;
 }
 .weather-details {
   text-transform: capitalize;
@@ -130,8 +130,13 @@ body {
     font-size: 10px;
     margin-top: 30px;
   }
-
+  .row .emo {
+    margin-top: 23px;
+  }
   .forcast-temperature {
     font-size: 11px;
+  }
+  .github-link {
+    margin-top: -8px;
   }
 }
